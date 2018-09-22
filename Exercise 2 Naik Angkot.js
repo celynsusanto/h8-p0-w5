@@ -13,11 +13,8 @@ function naikAngkot(arrPenumpang) {
   var indexAwal = 0;
   var indexBelakang = 0;
   var obj = {
-    //   penumpang:'',
-    //   naikDari:'',
-    //   tujuan:'',
-    //   bayar:0
   };
+  var arr=[]
 
   for (var i = 0; i <= arrPenumpang.length - 1; i++) {
     for (var j = 0; j <= rute.length - 1; j++) {
@@ -34,8 +31,9 @@ function naikAngkot(arrPenumpang) {
       tujuan: arrPenumpang[i][2],
       bayar: biaya
     };
+    arr.push(obj[i])
   }
-  return obj;
+  return arr;
 }
 
 //TEST CASE
@@ -43,4 +41,4 @@ console.log(naikAngkot([["Dimitri", "B", "F"], ["Icha", "A", "B"]]));
 // [ { penumpang: 'Dimitri', naikDari: 'B', tujuan: 'F', bayar: 8000 },
 //   { penumpang: 'Icha', naikDari: 'A', tujuan: 'B', bayar: 2000 } ]
 
-// console.log(naikAngkot([])); //[]
+console.log(naikAngkot([])); //[]
