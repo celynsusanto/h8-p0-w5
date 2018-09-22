@@ -16,7 +16,7 @@ function highestScore(students) {
   for (var j = 0; j <= students.length - 1; j++) {
     if (kelas[students[j].class]["name"] === undefined) {
       kelas[students[j].class]["name"] = students[j].name + ", ";
-      kelas[students[j].class]["score"] = students[j].score + ", ";
+      kelas[students[j].class]["score"] = students[j].score;
     } else {
       var nilaiTertinggi=students[j].score
       if (students[j].score > nilaiTertinggi) {
